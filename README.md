@@ -1,54 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Imja – AI Companion</title>
-</head>
-<body>
+IMJA – AI Companion
 
-  <h1>Imja – AI Companion</h1>
+IMJA is a simple full-stack AI companion app that supports chat and image generation using locally hosted AI models.
 
-  <p>
-    Imja is an AI-powered virtual companion that combines conversational AI
-    with AI image generation to create a girlfriend-like experience.
-  </p>
+Features=>>
 
-  <h2>Setup Instructions</h2>
+ ●AI chat interface
 
-  <h3>Backend Setup</h3>
-  <ol>
-    <li>Navigate to the backend directory</li>
-    <pre><code>cd backend</code></pre>
+ ●Local LLM support (Ollama / vLLM)
 
-    <li>Install dependencies</li>
-    <pre><code>npm install</code></pre>
+ ●Image generation with Stable Diffusion (AUTOMATIC1111 API)
 
-    <li>Configure environment variables</li>
-    <pre><code>cp .env.example .env</code></pre>
+ ●Dummy responses when AI services are not running
 
-    <li>Start the backend server</li>
-    <pre><code>node server.js</code></pre>
-  </ol>
+Setup≫≫
+ ✦Backend
+  ● cd backend
+  ● npm install
+  ● cp .env.example .env
+  ● node server.js
 
-  <h3>Frontend Setup</h3>
-  <ol>
-    <li>Navigate to the frontend directory</li>
-    <pre><code>cd frontend</code></pre>
+✦Frontend
+  ● cd frontend
+  ● npm install
+  ● npm run dev
 
-    <li>Install dependencies</li>
-    <pre><code>npm install</code></pre>
-
-    <li>Run the development server</li>
-    <pre><code>npm run dev</code></pre>
-  </ol>
-
-  <h2>Notes</h2>
-  <ul>
-    <li>If Ollama or vLLM is not configured, the /chat endpoint returns dummy replies</li>
-    <li>The /image endpoint requires Stable Diffusion (AUTOMATIC1111) running with --api</li>
-    <li>Ensure STABLE_DIFF_URL is set correctly in the backend .env file</li>
-  </ul>
-
-</body>
-</html>
-
+Notes ➪
+ ➜/chat returns dummy replies if Ollama or vLLM is not configured
+ ➜/image requires AUTOMATIC1111 running with --api
